@@ -11,7 +11,7 @@ const MapComponent = ({ foodTrucks }) => {
   const defaultIcon = L.icon({
     iconUrl: markerIcon,
     shadowUrl: markerShadow,
-    iconSize: [24, 40],
+    iconSize: [17, 30],
     shadowSize: [41, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
