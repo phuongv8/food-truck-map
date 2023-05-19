@@ -1,5 +1,7 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 import './MapComponent.css';
 
 const MapComponent = ({ foodTrucks }) => {
@@ -7,8 +9,8 @@ const MapComponent = ({ foodTrucks }) => {
   const zoom = 13;
 
   const defaultIcon = L.icon({
-    iconUrl: require('leaflet/dist/images/marker-icon.png'),
-    shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+    iconUrl: markerIcon,
+    shadowUrl: markerShadow,
     iconSize: [24, 40],
     shadowSize: [41, 41],
     iconAnchor: [12, 41],
