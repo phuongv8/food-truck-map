@@ -8,8 +8,10 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
+      const currentDate = new Date().toISOString().slice(0, 10);
+
       const response = await axios.get(
-        "https://data.sfgov.org/resource/rqzj-sfat.json?$select=Latitude,Longitude,Applicant,FoodItems&$where=Status='APPROVED' AND ExpirationDate > '2023-05-19'"
+        `https://data.sfgov.org/resource/rqzj-sfat.json?$select=Latitude,Longitude,Applicant,FoodItems&$where=Status='APPROVED' AND ExpirationDate > '${currentDate}'`
       );
       const validFoodTrucks = response.data.filter(
         truck =>
