@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        'https://data.sfgov.org/resource/rqzj-sfat.json?$select=Latitude,Longitude,Applicant,FoodItems'
+        "https://data.sfgov.org/resource/rqzj-sfat.json?$select=Latitude,Longitude,Applicant,FoodItems&$where=Status='APPROVED' AND ExpirationDate > '2023-05-19'"
       );
       const validFoodTrucks = response.data.filter(
         truck =>
@@ -18,6 +18,7 @@ function App() {
           truck.Applicant !== undefined &&
           truck.FoodItems !== undefined
       );
+
       setFoodTrucks(validFoodTrucks);
     };
     fetchData();
