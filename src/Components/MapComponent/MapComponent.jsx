@@ -35,9 +35,11 @@ const MapComponent = ({ foodTrucks }) => {
             icon={defaultIcon}
           >
             <Popup>
-              <strong>{truck.Applicant}</strong>
-              <br />
-              {truck.FoodItems}
+              <h1 className="applicant">{truck.Applicant}</h1>
+              <p className="food-items">
+                <span className="food-items-label">Food Items: </span>
+                {truck.FoodItems}
+              </p>
             </Popup>
           </Marker>
         ))}

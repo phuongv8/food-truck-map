@@ -2,3 +2,16 @@
   height: 100vh;
   width: 100%;
 }
+
+.applicant {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.food-items-label {
+  font-weight: bold;
+}
+
+.food-items {
+  font-weight: normal;
+}
