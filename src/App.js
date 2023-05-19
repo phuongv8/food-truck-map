@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import MapComponent from './Components/MapComponent/MapComponent';
 
 function App() {
+  const [foodTrucks, setFoodTrucks] = useState([
+    {
+      Applicant: 'Mock Food Truck 1',
+      FoodItems: 'Burgers, Fries, Drinks',
+      Latitude: 37.7839,
+      Longitude: -122.4081,
+    },
+    {
+      Applicant: 'Mock Food Truck 2',
+      FoodItems: 'Tacos, Burritos, Quesadillas',
+      Latitude: 37.7694,
+      Longitude: -122.4154,
+    },
+    {
+      Applicant: 'Mock Food Truck 3',
+      FoodItems: 'Sandwiches, Salads, Soups',
+      Latitude: 37.7741,
+      Longitude: -122.4377,
+    },
+  ]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MapComponent foodTrucks={foodTrucks} />
     </div>
   );
 }
