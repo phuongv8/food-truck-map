@@ -11,7 +11,7 @@ function App() {
       const currentDate = new Date().toISOString().slice(0, 10);
 
       const response = await axios.get(
-        `https://data.sfgov.org/resource/rqzj-sfat.json?$select=Latitude,Longitude,Applicant,FoodItems&$where=Status='APPROVED' AND ExpirationDate > '${currentDate}'`
+        `https://data.sfgov.org/resource/rqzj-sfat.json?$select=Latitude,Longitude,Applicant,FoodItems&$where=Status='APPROVED' AND ExpirationDate > '${currentDate}' AND FacilityType='Truck'`
       );
       const validFoodTrucks = response.data.filter(
         truck =>
