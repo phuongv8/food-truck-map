@@ -2,7 +2,6 @@
   "name": "food-truck-api",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://phuongv8.github.io/food-truck-map",
   "dependencies": {
     "@react-leaflet/core": "^2.1.0",
     "@testing-library/jest-dom": "^5.16.5",
